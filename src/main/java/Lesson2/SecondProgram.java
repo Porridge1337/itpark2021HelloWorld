@@ -6,7 +6,7 @@ public class SecondProgram {
         System.out.println("деление " + divide(10,8));
         System.out.println("вычитание " + subtract(5,88));
         System.out.println("умножение " + multiply(5,5));
-        System.out.println("деление " + divide(36, 6));
+        System.out.println("деление " + sum(36, 6));
         System.out.println( formula(20.22,5,"I"));
     }
 
