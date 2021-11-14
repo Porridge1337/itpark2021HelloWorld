@@ -12,7 +12,7 @@ public class FourthLesson {
             return 0;
         }
         while (degree * degree <= num) {
-            if(degree * degree == num){
+            if (degree * degree == num) {
                 return degree;
             }
             degree++;
