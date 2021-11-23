@@ -12,7 +12,7 @@ public class SixthLessonSecondTask {
             int num = printNumber() - 1;
             cache = isExceed(cache, num + 1);
             if (getArrayIndex(cache, num) != num) {
-                putInCash(cache, num, recursionFibonacci(num));
+                putInCash(cache, num, recursionFibonacci(num + 1));
             }
             System.out.println("Результат = " + cache[num]);
             System.out.println("Если хотите продолжить - нажмите 'y', если остановиться - любую другую кнопку");
