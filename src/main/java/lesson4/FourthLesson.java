@@ -1,9 +1,9 @@
-package Lesson4;
+package lesson4;
 
 public class FourthLesson {
 
     public static void main(String[] args) {
-        System.out.println(squareRoot(121));
+        System.out.println(squareRoot(17));
     }
 
     public static int squareRoot(int num) {
@@ -17,7 +17,6 @@ public class FourthLesson {
             }
             degree++;
         }
-
         return 0;
     }
 }
