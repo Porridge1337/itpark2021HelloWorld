@@ -14,7 +14,7 @@ public class SixthLessonFirstTask {
 
     public static double maxNumber(double[] array) {
         double num = array[0];
-        if(array.length > 1) {
+        if (array.length > 1) {
             for (int i = 0; i <= array.length - 1; i++) {
                 if (num < array[i]) num = array[i];
             }
@@ -24,7 +24,7 @@ public class SixthLessonFirstTask {
 
     public static double minNumber(double[] array) {
         double num = array[0];
-        if(array.length > 1) {
+        if (array.length > 1) {
             for (int i = 0; i <= array.length - 1; i++) {
                 if (num > array[i]) num = array[i];
             }
@@ -49,7 +49,7 @@ public class SixthLessonFirstTask {
             System.out.print("Введите пожалуйста число: ");
         }
         int length = sc.nextInt();
-        if (length <=0){
+        if (length <= 0) {
             System.out.println("Указано отрицательное число, введите заного");
             return printNumber();
         }
