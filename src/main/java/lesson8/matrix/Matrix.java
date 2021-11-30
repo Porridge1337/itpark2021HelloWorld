@@ -4,19 +4,18 @@ public class Matrix {
 
     private int[][] matrix;
     private int[][] identityMatrix;
+    int determinant;
 
     public Matrix() {
         this.matrix = new int[2][2];
         this.identityMatrix = new int[2][2];
         matrix = fillArray(matrix);
-        //  identityMatrix = fillIdentityMatrix(identityMatrix);
     }
 
-    public Matrix(int n) {
-        this.matrix = new int[n][n];
-        this.identityMatrix = new int[n][n];
+    public Matrix(int size) {
+        this.matrix = new int[size][size];
+        this.identityMatrix = new int[size][size];
         matrix = fillArray(matrix);
-        //identityMatrix = fillIdentityMatrix(identityMatrix);
     }
 
     public Matrix(int[][] matrix, int[][] identityMatrix) {
@@ -29,17 +28,17 @@ public class Matrix {
         this.identityMatrix = new int[matrix.length][matrix.length];
     }
 
-    public void getSize() {
+    public void printSize() {
         System.out.println(matrix.length + " " + matrix[0].length + " - размер матрицы");
     }
 
-    public void printMatrix(String choose) {
+    public void printMatrix(String choose) { // при неверном выборе типа вывода - в консоль ничго не поступит
         while (choose.equals("matrix") || choose.equals("identity")) {
             for (int i = 0; i <= matrix.length - 1; i++) {
                 for (int j = 0; j <= matrix[i].length - 1; j++) {
                     if (choose.equals("matrix")) {
                         System.out.print(matrix[i][j] + " | ");
-                    } else {
+                    } else if (choose.equals("identity")) {
                         System.out.print(identityMatrix[i][j] + " | ");
                     }
                 }
@@ -56,6 +55,18 @@ public class Matrix {
             }
         }
         return array;
+    }
+
+    public int getDeterminant() {
+        return determinant;
+    }
+
+    public void setDeterminant(int determinant) {
+        this.determinant = determinant;
+    }
+
+    public int getMatrixSize() {
+        return matrix.length;
     }
 
     public int[][] getMatrix() {

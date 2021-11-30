@@ -48,7 +48,6 @@ public class MatrixCalculation {
                     array[i][j] += a[i][k] * b[k][j];
                 }
             }
-
         }
         return array;
     }
@@ -75,9 +74,7 @@ public class MatrixCalculation {
         int array[][] = new int[length][length];
         for (int i = 0; i <= array.length - 1; i++) {
             for (int j = 0; j <= array[i].length - 1; j++) {
-                if (i == j) {
-                    array[i][j] = 1;
-                } else array[i][j] = 0;
+                array[i][j] = i == j ? 1 : 0;
             }
         }
         return array;
