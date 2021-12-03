@@ -50,7 +50,7 @@ public class SixthLessonFirstTask {
         }
         int length = sc.nextInt();
         if (length <= 0) {
-            System.out.println("Указано отрицательное число, введите заного");
+            System.out.println("Указано отрицательное число или ноль, введите заного");
             return printNumber();
         }
         return length;
