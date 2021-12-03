@@ -9,26 +9,27 @@ public class SixthLessonSecondTask {
         int[] cache = new int[10];
         String proceed = "y";
         while (proceed.equals("y")) {
-            int num = printNumber() - 1;
-            cache = isExceed(cache, num + 1);
+            int num = printNumber();
+            cache = isExceed(cache, num);
             if (getArrayIndex(cache, num) != num) {
-                putInCash(cache, num, recursionFibonacci(num + 1));
+                cache = fibonacci(num, cache);
             }
-            System.out.println("Результат = " + cache[num]);
+            System.out.println("Результат = " + cache[num - 1]);
             System.out.println("Если хотите продолжить - нажмите 'y', если остановиться - любую другую кнопку");
             proceed = printLetter();
         }
         System.out.println("Программа закончила выполнение");
     }
 
-    public static int recursionFibonacci(int n) {
-        if (n == 0) {
-            return 0;
-        } else if (n == 1) {
-            return 1;
-        } else {
-            return recursionFibonacci(n - 1) + recursionFibonacci(n - 2);
+    public static int[] fibonacci(int n, int[] array) {
+        int mem = 0;
+        int number = 1;
+        for (int i = 0; i <= n - 1; i++) {
+            number += mem;
+            array[i] = number;
+            mem = number - mem;
         }
+        return array;
     }
 
     public static int[] isExceed(int[] cache, int index) {
@@ -48,8 +49,8 @@ public class SixthLessonSecondTask {
 
     public static int getArrayIndex(int[] array, int number) {
         for (int i = 0; i <= array.length - 1; i++) {
-            if (array[i] == array[number]) {
-                return i;
+            if (array[i] == array[number - 1]) {
+                return i + 1;
             }
         }
         return -1;
@@ -63,7 +64,12 @@ public class SixthLessonSecondTask {
             System.out.println("Ошибка, введено: " + error);
             System.out.print("Введите пожалуйста число: ");
         }
-        return sc.nextInt();
+        int length = sc.nextInt();
+        if (length <= 0) {
+            System.out.println("Указано отрицательное число, введите заного");
+            return printNumber();
+        }
+        return length;
     }
 
     public static String printLetter() {
