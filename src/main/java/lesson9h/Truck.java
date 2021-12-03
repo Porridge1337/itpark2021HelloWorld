@@ -1,4 +1,4 @@
-package lesson9;
+package lesson9h;
 
 public class Truck extends Automobile {
 
