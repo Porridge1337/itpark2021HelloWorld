@@ -3,7 +3,7 @@ package lesson10.converter;
 import lesson10.TemperatureScales;
 import lesson10.TemperatureValue;
 
-public class CelsiusConverter implements TemperatureConverter {
+public class CelsiusConverter implements TemperatureConverterable {
 
     private final static TemperatureScales CURRENT_SCALE = TemperatureScales.CELSIUS;
     private double convertedValue;

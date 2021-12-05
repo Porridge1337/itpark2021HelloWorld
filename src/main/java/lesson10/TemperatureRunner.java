@@ -3,7 +3,7 @@ package lesson10;
 import lesson10.converter.CelsiusConverter;
 import lesson10.converter.FahrenheitConverter;
 import lesson10.converter.KelvinConverter;
-import lesson10.converter.TemperatureConverter;
+import lesson10.converter.TemperatureConverterable;
 
 public class TemperatureRunner {
 
@@ -16,9 +16,9 @@ public class TemperatureRunner {
         System.out.println(t2);
         System.out.println(t3);
 
-        TemperatureConverter celsiusConverter = new CelsiusConverter();
-        TemperatureConverter fahrenheitConverter = new FahrenheitConverter();
-        TemperatureConverter kelvinConverterConverter = new KelvinConverter();
+        TemperatureConverterable celsiusConverter = new CelsiusConverter();
+        TemperatureConverterable fahrenheitConverter = new FahrenheitConverter();
+        TemperatureConverterable kelvinConverterConverter = new KelvinConverter();
 
         TemperatureValue t1CelsiusConverted = celsiusConverter.convert(t1);
         TemperatureValue t2CelsiusConverted = celsiusConverter.convert(t2);
