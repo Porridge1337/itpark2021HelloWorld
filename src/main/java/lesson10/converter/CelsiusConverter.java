@@ -5,7 +5,7 @@ import lesson10.TemperatureValue;
 
 public class CelsiusConverter implements TemperatureConverter {
 
-    private final static TemperatureScales currentScale = TemperatureScales.CELSIUS;
+    private final static TemperatureScales CURRENT_SCALE = TemperatureScales.CELSIUS;
     private double convertedValue;
 
     public CelsiusConverter() {
@@ -18,10 +18,10 @@ public class CelsiusConverter implements TemperatureConverter {
                 return temperatureValue;
             case FAHRENHEIT:
                 convertedValue = (temperatureValue.getValue() - 32) / 1.8;
-                return new TemperatureValue(convertedValue, currentScale);
+                return new TemperatureValue(convertedValue, CURRENT_SCALE);
             case KELVIN:
                 convertedValue = temperatureValue.getValue() - 273.15;
-                return new TemperatureValue(convertedValue, currentScale);
+                return new TemperatureValue(convertedValue, CURRENT_SCALE);
             default:
                 return new TemperatureValue();
         }
