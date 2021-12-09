@@ -3,42 +3,45 @@ package lesson8.matrix;
 public class MatrixRunner {
 
     public static void main(String[] args) {
+        try {
+            Matrix a = new Matrix();
+            a.fillArray();
+            a.printMatrix();
+            System.out.println("Определитель матрицы имеет значение: " + Matrix.determinant(a.getArray(),a.getArraySize()));
+            System.out.println("----------------------------");
 
-        Matrix m = new Matrix();
-        m.setIdentityMatrix(MatrixCalculation.fillIdentityMatrix(m.getMatrixSize()));
-        m.printMatrix("matrix");
-        System.out.println("------------------");
-        m.printMatrix("identity");
-        m.printSize();
-        System.out.println("------------------");
+            Matrix b = new Matrix();
+            b.fillArray();
+            b.printMatrix();
+            System.out.println("----------------------------");
 
-        Matrix n = new Matrix(5);
-        n.setIdentityMatrix(MatrixCalculation.fillIdentityMatrix(n.getMatrixSize()));
-        n.printMatrix("matrix");
-        System.out.println("------------------");
-        n.printMatrix("identity");
-        n.printSize();
-        System.out.println("------------------");
+            Matrix sum = a.calculation(b, "sum");
+            System.out.println("Сложение матрицы на матрицу ");
+            sum.printMatrix();
+            System.out.println("----------------------------");
 
-        Matrix x = new Matrix();
-        System.out.println("матрица до инвертирования");
-        x.printMatrix("matrix");
-        System.out.println("после инвертирования");
-        x.setMatrix(MatrixCalculation.invertMatrix(x.getMatrix()));
-        x.printMatrix("matrix");
-        System.out.println("----------------------------------------");
+            a.multiplyOnNumber(2);
+            a.printMatrix();
+            System.out.println("Умножение матрицы на 2");
+            System.out.println("---------------------");
 
-        Matrix n1 = new Matrix(MatrixCalculation.calculation(m.getMatrix(),x.getMatrix(), "multiply"));
-        n1.printMatrix("matrix");
-        System.out.println("---------------------");
-        Matrix n2 = new Matrix(MatrixCalculation.powerMatrix(m.getMatrix(),2));
-        n2.printMatrix("matrix");
-        System.out.println("---------------------");
-        Matrix n3 = new Matrix(MatrixCalculation.multiplyOnNumber(m.getMatrix(), 4));
-        n3.printMatrix("matrix");
-        n3.setDeterminant(MatrixCalculation.determinant(n3.getMatrix(), n3.getMatrixSize()));
-        System.out.println(n3.getDeterminant());
+            a.identityMatrix();
+            a.printMatrix();
+            System.out.println("---------------------");
+            System.out.println("Вывод единичной матрицы 6х6");
+            Matrix.identityMatrixStatic(6).printMatrix();
+            System.out.println("---------------------");
+           Matrix invert = b.invertMatrix();
+           invert.printMatrix();
+            System.out.println("-----------------------");
+            Matrix power = sum.powerMatrix(2);
+            power.printMatrix();
+            System.out.println("Вывод возведения в степень матрицы");
 
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
