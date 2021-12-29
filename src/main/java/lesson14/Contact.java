@@ -1,6 +1,8 @@
 package lesson14;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Contact {
@@ -10,6 +12,7 @@ public class Contact {
     private String number;
     private MobileOperator operator;
     private boolean isTownNumber;
+    private List<String> relatedPhoneNumbers = new ArrayList<>();
 
     public Contact(String name, String surname, String number, MobileOperator operator, boolean isTownNumber) {
         this.name = name;
@@ -53,6 +56,18 @@ public class Contact {
 
     public boolean isTownNumber() {
         return isTownNumber;
+    }
+
+    public void setTownNumber(boolean townNumber) {
+        isTownNumber = townNumber;
+    }
+
+    public List<String> getRelatedPhoneNumbers() {
+        return relatedPhoneNumbers;
+    }
+
+    public void setRelatedPhoneNumbers(List<String> relatedPhoneNumbers) {
+        this.relatedPhoneNumbers = relatedPhoneNumbers;
     }
 
     @Override
