@@ -1,22 +1,23 @@
 package lesson16;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Logger extends Thread {
 
     private LogInformation logInformation;
     private LogFactory factory;
     private int sleepTime;
-    private boolean isContinue = true;
-    private final static String location = "./src/main/java/lesson16/ThreadLog.txt";
+    private AtomicBoolean flag;
+    private final static String location = "./src/main/java/lesson16/resources/ThreadLog.txt";
 
-    public Logger(String threadIdentification, int sleepTime) {
+    public Logger(String threadIdentification, AtomicBoolean flag, int sleepTime) {
         super(threadIdentification);
         this.sleepTime = sleepTime;
+        this.flag=flag;
         createLog();
     }
 
@@ -44,7 +45,7 @@ public class Logger extends Thread {
     @Override
     public void run() {
         try {
-            while (isContinue) {
+            while (!flag.get()) {
                 String log = "Текущее время и дата: " + logInformation.getDate() + ", " +
                         "Log level: " + logInformation.getLogLevel() + ", " +
                         "Идентификатор треда: " + getName() + ", " +
@@ -57,9 +58,5 @@ public class Logger extends Thread {
             e.printStackTrace();
             Thread.currentThread().interrupt();
         }
-    }
-
-    public void setContinue(boolean aContinue) {
-        isContinue = aContinue;
     }
 }

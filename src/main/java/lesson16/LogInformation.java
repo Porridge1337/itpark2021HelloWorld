@@ -1,5 +1,7 @@
 package lesson16;
 
+import lesson16.enums.LogLevel;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
