@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class LoggerRunner {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        System.out.println("Начало работы потоков");
+        System.out.println("Начало работы потоков.");
         AtomicBoolean flag1 = new AtomicBoolean(false);
         AtomicBoolean flag2 = new AtomicBoolean(false);
         AtomicBoolean flag3 = new AtomicBoolean(false);
