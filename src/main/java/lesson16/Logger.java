@@ -12,7 +12,7 @@ public class Logger extends Thread {
     private LogFactory factory;
     private int sleepTime;
     private AtomicBoolean flag;
-    private final static String location = "./src/main/java/lesson16/resources/ThreadLog.txt";
+    private final static String location = "./src/main/resources/lesson16/ThreadLog.txt";
 
     public Logger(String threadIdentification, AtomicBoolean flag, int sleepTime) {
         super(threadIdentification);
