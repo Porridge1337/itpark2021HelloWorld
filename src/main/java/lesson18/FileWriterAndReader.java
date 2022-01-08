@@ -24,11 +24,9 @@ public class FileWriterAndReader {
     private void writeFile(String writeLocation, String writeText) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(writeLocation))) {
             bw.write(writeText);
-            System.out.println("запись");
+            System.out.println("запись произошла");
         } catch (IOException exception) {
             exception.printStackTrace();
         }
     }
-
-
 }
