@@ -11,10 +11,10 @@ public class FileWriterAndReader {
 
     public void readFile(String readLocation) {
         try (BufferedReader br = new BufferedReader(new FileReader(readLocation))) {
-            String texttst = "";
+            String text = "";
             int i = 0;
-            while ((texttst = br.readLine()) != null) {
-                writeFile("./src/main/resources/lesson18/fileWrite/" + ++i + ".txt", texttst);
+            while ((text = br.readLine()) != null) {
+                writeFile("./src/main/resources/lesson18/fileWrite/" + ++i + ".txt", text);
             }
         } catch (IOException ex) {
             ex.printStackTrace();
