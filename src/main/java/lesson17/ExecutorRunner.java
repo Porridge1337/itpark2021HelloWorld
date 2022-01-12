@@ -13,18 +13,18 @@ public class ExecutorRunner {
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
-        List<Integer> numbers = new ArrayList<>();
+        List<Long> numbers = new ArrayList<>();
         for (int i = 0; i < 1_000_000; i++) {
-            numbers.add(new Random().nextInt(1_000_000_000));
+            numbers.add((long) new Random().nextInt(1_000_000_000));
         }
         Collections.sort(numbers);
 
-        Callable<Integer> min = () -> {
+        Callable<Long> min = () -> {
             System.out.println("Минимальное значение = " + numbers.get(0));
             return numbers.get(0);
         };
-        Callable<Integer> average = () -> {
-            int temp = 0;
+        Callable<Long> average = () -> {
+            long temp = 0;
             for (int i = 0; i < numbers.size(); i++) {
                 temp += numbers.get(i);
             }
@@ -32,12 +32,12 @@ public class ExecutorRunner {
             System.out.println("Среднее значение = " + temp);
             return temp;
         };
-        Callable<Integer> max = () -> {
+        Callable<Long> max = () -> {
             System.out.println("Максимальное значение = " + numbers.get(numbers.size() - 1));
             return numbers.get(numbers.size() - 1);
         };
 
-        List<Callable<Integer>> threads = new ArrayList<>();
+        List<Callable<Long>> threads = new ArrayList<>();
         threads.add(min);
         threads.add(average);
         threads.add(max);
