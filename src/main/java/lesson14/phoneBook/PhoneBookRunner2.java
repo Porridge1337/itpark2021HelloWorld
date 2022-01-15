@@ -3,8 +3,6 @@ package lesson14.phoneBook;
 import lesson14.Contact;
 import lesson14.util.PhoneBookUtil;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.function.Function;
@@ -31,15 +29,11 @@ public class PhoneBookRunner2 {
                 collect(Collectors.toMap(contact -> contact.getNumber(), Function.identity()));
         Map<String, Contact> listMap2 = bookMap2.getAllContacts().stream().
                 collect(Collectors.toMap(contact -> contact.getNumber(), Function.identity()));
-        PhoneBookUtil.findRelatedContacts(listMap1,listMap2);
-
+        PhoneBookUtil.findRelatedContacts(listMap1, listMap2);
 
         PhoneBookUtil.printRelatedContacts(book1, book2);
         PhoneBookUtil.printRelatedContacts(bookSet1, bookSet2);
         PhoneBookUtil.printRelatedContacts(bookMap1, bookMap2);
-
-
-        // System.out.println(book1.getAllContacts());
 
     }
 
