@@ -1,0 +1,163 @@
+{
+  "employeeList" : [ {
+    "id" : "15220",
+    "login" : "ROMAN",
+    "fullName" : "ROMAN WILSON",
+    "subdivision" : "TESTING_DEPARTMENT",
+    "city" : "WASHINGTON",
+    "position" : "TESTER",
+    "salary" : "802"
+  }, {
+    "id" : "14078",
+    "login" : "MAX",
+    "fullName" : "MAX JACKSON",
+    "subdivision" : "TESTING_DEPARTMENT",
+    "city" : "LOS_ANGELES",
+    "position" : "TESTER",
+    "salary" : "618"
+  }, {
+    "id" : "15790",
+    "login" : "ALEX",
+    "fullName" : "ALEX DAVIS",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "LOS_ANGELES",
+    "position" : "HR_MANAGER",
+    "salary" : "853"
+  }, {
+    "id" : "15707",
+    "login" : "KATE",
+    "fullName" : "KATE BROWN",
+    "subdivision" : "TESTING_DEPARTMENT",
+    "city" : "CLEVELAND",
+    "position" : "TESTER",
+    "salary" : "853"
+  }, {
+    "id" : "17038",
+    "login" : "YAROSLAVA",
+    "fullName" : "YAROSLAVA MURPHY",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "CLEVELAND",
+    "position" : "HR_MANAGER",
+    "salary" : "507"
+  }, {
+    "id" : "15118",
+    "login" : "SEMYON",
+    "fullName" : "SEMYON MILLER",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "NEW_YORK",
+    "position" : "HR_MANAGER",
+    "salary" : "670"
+  }, {
+    "id" : "11388",
+    "login" : "YAROSLAVA",
+    "fullName" : "YAROSLAVA MURPHY",
+    "subdivision" : "TESTING_DEPARTMENT",
+    "city" : "CLEVELAND",
+    "position" : "TESTER",
+    "salary" : "938"
+  }, {
+    "id" : "13748",
+    "login" : "DIMA",
+    "fullName" : "DIMA MILLER",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "WASHINGTON",
+    "position" : "HR_MANAGER",
+    "salary" : "983"
+  }, {
+    "id" : "15202",
+    "login" : "DIANA",
+    "fullName" : "DIANA ANDERSON",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "CLEVELAND",
+    "position" : "HR_MANAGER",
+    "salary" : "799"
+  }, {
+    "id" : "14172",
+    "login" : "VIKA",
+    "fullName" : "VIKA MOORE",
+    "subdivision" : "TESTING_DEPARTMENT",
+    "city" : "CLEVELAND",
+    "position" : "TESTER",
+    "salary" : "530"
+  }, {
+    "id" : "11594",
+    "login" : "MAX",
+    "fullName" : "MAX FREEMAN",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "CLEVELAND",
+    "position" : "HR_MANAGER",
+    "salary" : "715"
+  }, {
+    "id" : "10087",
+    "login" : "ALINA",
+    "fullName" : "ALINA LEE",
+    "subdivision" : "TESTING_DEPARTMENT",
+    "city" : "NEW_YORK",
+    "position" : "TESTER",
+    "salary" : "753"
+  }, {
+    "id" : "13439",
+    "login" : "ROMAN",
+    "fullName" : "ROMAN WARD",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "LOS_ANGELES",
+    "position" : "HR_MANAGER",
+    "salary" : "966"
+  }, {
+    "id" : "12718",
+    "login" : "ALEX",
+    "fullName" : "ALEX LEE",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "NEW_YORK",
+    "position" : "HR_MANAGER",
+    "salary" : "960"
+  }, {
+    "id" : "16432",
+    "login" : "ILYA",
+    "fullName" : "ILYA DAVIS",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "NEW_YORK",
+    "position" : "HR_MANAGER",
+    "salary" : "944"
+  }, {
+    "id" : "16736",
+    "login" : "ROMAN",
+    "fullName" : "ROMAN JONES",
+    "subdivision" : "TESTING_DEPARTMENT",
+    "city" : "WASHINGTON",
+    "position" : "TESTER",
+    "salary" : "903"
+  }, {
+    "id" : "12263",
+    "login" : "YAROSLAVA",
+    "fullName" : "YAROSLAVA MORGAN",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "CLEVELAND",
+    "position" : "HR_MANAGER",
+    "salary" : "673"
+  }, {
+    "id" : "15874",
+    "login" : "SEMYON",
+    "fullName" : "SEMYON HARRISON",
+    "subdivision" : "TESTING_DEPARTMENT",
+    "city" : "NEW_YORK",
+    "position" : "TESTER",
+    "salary" : "515"
+  }, {
+    "id" : "12897",
+    "login" : "YAROSLAVA",
+    "fullName" : "YAROSLAVA JACKSON",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "CLEVELAND",
+    "position" : "HR_MANAGER",
+    "salary" : "747"
+  }, {
+    "id" : "15232",
+    "login" : "KATE",
+    "fullName" : "KATE ANDERSON",
+    "subdivision" : "HR_DEPARTMENT",
+    "city" : "WASHINGTON",
+    "position" : "HR_MANAGER",
+    "salary" : "953"
+  } ]
+}
