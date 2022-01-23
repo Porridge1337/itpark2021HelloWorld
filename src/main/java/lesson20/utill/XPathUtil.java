@@ -22,14 +22,14 @@ import java.nio.file.Path;
 public class XPathUtil {
 
 
-    public void aboveAverageSalary(Path path) throws IOException, ParserConfigurationException,
+    public static void aboveAverageSalary(Path path) throws IOException, ParserConfigurationException,
             SAXException, XPathExpressionException {
         try (InputStream inputStream = new FileInputStream(path.toString())) {
             Document xmlDocument = getXML(inputStream);
             XPath xPath = XPathFactory.newInstance().newXPath();
             double avg = (double) xPath.compile("sum(//employees//employee//salary) div count(//employees//employee//salary)")
                     .evaluate(xmlDocument, XPathConstants.NUMBER);
-            System.out.println(avg);
+            System.out.println("Среднее значение: " + avg);
             String expression = "//employees//employee";
             NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODESET);
             for (int i = 0; i < nodeList.getLength(); i++) {
@@ -42,7 +42,7 @@ public class XPathUtil {
         }
     }
 
-    private Document getXML(InputStream inputStream) throws ParserConfigurationException, IOException, SAXException {
+    private static Document getXML(InputStream inputStream) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = builderFactory.newDocumentBuilder();
         Document document = builder.parse(inputStream);
