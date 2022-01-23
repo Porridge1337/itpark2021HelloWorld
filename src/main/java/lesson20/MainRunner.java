@@ -1,4 +1,4 @@
-package lesson20.jaxb;
+package lesson20;
 
 import lesson20.Employees;
 import lesson20.employeeFactory.EmployeeFactory;

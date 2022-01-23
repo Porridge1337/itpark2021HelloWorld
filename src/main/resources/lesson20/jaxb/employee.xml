@@ -1,163 +1,163 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <employees>
-    <employee ID="15220">
-        <city>WASHINGTON</city>
-        <fullName>ROMAN WILSON</fullName>
-        <login>ROMAN</login>
-        <position>TESTER</position>
-        <salary>802</salary>
-        <subdivision>TESTING_DEPARTMENT</subdivision>
-    </employee>
-    <employee ID="14078">
+    <employee ID="14428">
         <city>LOS_ANGELES</city>
-        <fullName>MAX JACKSON</fullName>
+        <fullName>MAX MURPHY</fullName>
         <login>MAX</login>
         <position>TESTER</position>
-        <salary>618</salary>
+        <salary>545</salary>
         <subdivision>TESTING_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="15790">
+    <employee ID="10387">
         <city>LOS_ANGELES</city>
-        <fullName>ALEX DAVIS</fullName>
-        <login>ALEX</login>
+        <fullName>ROZA MURPHY</fullName>
+        <login>ROZA</login>
         <position>HR_MANAGER</position>
-        <salary>853</salary>
+        <salary>776</salary>
         <subdivision>HR_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="15707">
-        <city>CLEVELAND</city>
-        <fullName>KATE BROWN</fullName>
-        <login>KATE</login>
+    <employee ID="12373">
+        <city>LOS_ANGELES</city>
+        <fullName>DASHA MURPHY</fullName>
+        <login>DASHA</login>
         <position>TESTER</position>
-        <salary>853</salary>
+        <salary>969</salary>
         <subdivision>TESTING_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="17038">
-        <city>CLEVELAND</city>
-        <fullName>YAROSLAVA MURPHY</fullName>
-        <login>YAROSLAVA</login>
+    <employee ID="17022">
+        <city>LOS_ANGELES</city>
+        <fullName>ROMAN WHITE</fullName>
+        <login>ROMAN</login>
         <position>HR_MANAGER</position>
-        <salary>507</salary>
+        <salary>511</salary>
         <subdivision>HR_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="15118">
+    <employee ID="17333">
         <city>NEW_YORK</city>
-        <fullName>SEMYON MILLER</fullName>
-        <login>SEMYON</login>
-        <position>HR_MANAGER</position>
-        <salary>670</salary>
-        <subdivision>HR_DEPARTMENT</subdivision>
-    </employee>
-    <employee ID="11388">
-        <city>CLEVELAND</city>
-        <fullName>YAROSLAVA MURPHY</fullName>
-        <login>YAROSLAVA</login>
+        <fullName>ANDREY WILSON</fullName>
+        <login>ANDREY</login>
         <position>TESTER</position>
-        <salary>938</salary>
+        <salary>648</salary>
         <subdivision>TESTING_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="13748">
-        <city>WASHINGTON</city>
-        <fullName>DIMA MILLER</fullName>
-        <login>DIMA</login>
-        <position>HR_MANAGER</position>
-        <salary>983</salary>
-        <subdivision>HR_DEPARTMENT</subdivision>
-    </employee>
-    <employee ID="15202">
-        <city>CLEVELAND</city>
-        <fullName>DIANA ANDERSON</fullName>
-        <login>DIANA</login>
-        <position>HR_MANAGER</position>
-        <salary>799</salary>
-        <subdivision>HR_DEPARTMENT</subdivision>
-    </employee>
-    <employee ID="14172">
-        <city>CLEVELAND</city>
-        <fullName>VIKA MOORE</fullName>
+    <employee ID="15930">
+        <city>LOS_ANGELES</city>
+        <fullName>VIKA SMITH</fullName>
         <login>VIKA</login>
         <position>TESTER</position>
-        <salary>530</salary>
+        <salary>585</salary>
         <subdivision>TESTING_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="11594">
+    <employee ID="17239">
         <city>CLEVELAND</city>
-        <fullName>MAX FREEMAN</fullName>
-        <login>MAX</login>
-        <position>HR_MANAGER</position>
-        <salary>715</salary>
-        <subdivision>HR_DEPARTMENT</subdivision>
-    </employee>
-    <employee ID="10087">
-        <city>NEW_YORK</city>
-        <fullName>ALINA LEE</fullName>
-        <login>ALINA</login>
+        <fullName>YAROSLAVA WHITE</fullName>
+        <login>YAROSLAVA</login>
         <position>TESTER</position>
-        <salary>753</salary>
+        <salary>994</salary>
         <subdivision>TESTING_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="13439">
-        <city>LOS_ANGELES</city>
-        <fullName>ROMAN WARD</fullName>
-        <login>ROMAN</login>
+    <employee ID="17236">
+        <city>NEW_YORK</city>
+        <fullName>KOLYA HARRISON</fullName>
+        <login>KOLYA</login>
         <position>HR_MANAGER</position>
-        <salary>966</salary>
+        <salary>810</salary>
         <subdivision>HR_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="12718">
+    <employee ID="14023">
         <city>NEW_YORK</city>
-        <fullName>ALEX LEE</fullName>
+        <fullName>LIN DAVIS</fullName>
+        <login>LIN</login>
+        <position>TESTER</position>
+        <salary>568</salary>
+        <subdivision>TESTING_DEPARTMENT</subdivision>
+    </employee>
+    <employee ID="13773">
+        <city>NEW_YORK</city>
+        <fullName>ROZA SMITH</fullName>
+        <login>ROZA</login>
+        <position>HR_MANAGER</position>
+        <salary>922</salary>
+        <subdivision>HR_DEPARTMENT</subdivision>
+    </employee>
+    <employee ID="17470">
+        <city>LOS_ANGELES</city>
+        <fullName>DIANA WHITE</fullName>
+        <login>DIANA</login>
+        <position>HR_MANAGER</position>
+        <salary>809</salary>
+        <subdivision>HR_DEPARTMENT</subdivision>
+    </employee>
+    <employee ID="11715">
+        <city>CLEVELAND</city>
+        <fullName>DENIS COX</fullName>
+        <login>DENIS</login>
+        <position>TESTER</position>
+        <salary>569</salary>
+        <subdivision>TESTING_DEPARTMENT</subdivision>
+    </employee>
+    <employee ID="18213">
+        <city>WASHINGTON</city>
+        <fullName>ALEX WARD</fullName>
         <login>ALEX</login>
         <position>HR_MANAGER</position>
-        <salary>960</salary>
+        <salary>972</salary>
         <subdivision>HR_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="16432">
-        <city>NEW_YORK</city>
-        <fullName>ILYA DAVIS</fullName>
-        <login>ILYA</login>
+    <employee ID="19607">
+        <city>LOS_ANGELES</city>
+        <fullName>DASHA DAVIS</fullName>
+        <login>DASHA</login>
         <position>HR_MANAGER</position>
-        <salary>944</salary>
+        <salary>546</salary>
         <subdivision>HR_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="16736">
-        <city>WASHINGTON</city>
-        <fullName>ROMAN JONES</fullName>
+    <employee ID="18350">
+        <city>NEW_YORK</city>
+        <fullName>ROMAN MURPHY</fullName>
         <login>ROMAN</login>
         <position>TESTER</position>
-        <salary>903</salary>
+        <salary>771</salary>
         <subdivision>TESTING_DEPARTMENT</subdivision>
     </employee>
-    <employee ID="12263">
-        <city>CLEVELAND</city>
-        <fullName>YAROSLAVA MORGAN</fullName>
-        <login>YAROSLAVA</login>
-        <position>HR_MANAGER</position>
-        <salary>673</salary>
-        <subdivision>HR_DEPARTMENT</subdivision>
-    </employee>
-    <employee ID="15874">
-        <city>NEW_YORK</city>
-        <fullName>SEMYON HARRISON</fullName>
-        <login>SEMYON</login>
-        <position>TESTER</position>
-        <salary>515</salary>
-        <subdivision>TESTING_DEPARTMENT</subdivision>
-    </employee>
-    <employee ID="12897">
-        <city>CLEVELAND</city>
-        <fullName>YAROSLAVA JACKSON</fullName>
-        <login>YAROSLAVA</login>
-        <position>HR_MANAGER</position>
-        <salary>747</salary>
-        <subdivision>HR_DEPARTMENT</subdivision>
-    </employee>
-    <employee ID="15232">
+    <employee ID="11716">
         <city>WASHINGTON</city>
-        <fullName>KATE ANDERSON</fullName>
+        <fullName>ANDREY MOORE</fullName>
+        <login>ANDREY</login>
+        <position>HR_MANAGER</position>
+        <salary>529</salary>
+        <subdivision>HR_DEPARTMENT</subdivision>
+    </employee>
+    <employee ID="17784">
+        <city>CLEVELAND</city>
+        <fullName>KATE MURPHY</fullName>
         <login>KATE</login>
         <position>HR_MANAGER</position>
-        <salary>953</salary>
+        <salary>907</salary>
+        <subdivision>HR_DEPARTMENT</subdivision>
+    </employee>
+    <employee ID="19988">
+        <city>CLEVELAND</city>
+        <fullName>DIMA MILLER</fullName>
+        <login>DIMA</login>
+        <position>TESTER</position>
+        <salary>590</salary>
+        <subdivision>TESTING_DEPARTMENT</subdivision>
+    </employee>
+    <employee ID="19054">
+        <city>WASHINGTON</city>
+        <fullName>ALINA WARD</fullName>
+        <login>ALINA</login>
+        <position>HR_MANAGER</position>
+        <salary>579</salary>
+        <subdivision>HR_DEPARTMENT</subdivision>
+    </employee>
+    <employee ID="10145">
+        <city>NEW_YORK</city>
+        <fullName>SEMYON WHITE</fullName>
+        <login>SEMYON</login>
+        <position>HR_MANAGER</position>
+        <salary>649</salary>
         <subdivision>HR_DEPARTMENT</subdivision>
     </employee>
 </employees>
