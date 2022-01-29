@@ -20,7 +20,8 @@ public class EmployeeFactory {
             case TESTER -> subdivision = SubdivisionEnums.TESTING_DEPARTMENT;
             default -> throw new IllegalStateException("Unexpected value: " + position);
         }
-        return new Employee(String.valueOf(10000 + new Random().nextInt(10000)), names.toString(), fullName, subdivision.toString(),
-                city.toString(), position.toString(), String.valueOf(500 + new Random().nextInt(500)));
+        return new Employee(String.valueOf(10000 + new Random().nextInt(10000)), names.toString(), fullName,
+                subdivision.toString(), city.toString(), position.toString(),
+                String.valueOf(500 + new Random().nextInt(500)));
     }
 }
