@@ -27,26 +27,3 @@ public class WeatherInfo {
                 + "Описание погоды: " + weather.get(0).getDescription() + "\n";
     }
 }
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true)
-class WeatherMain {
-    private double temp;
-    private double feels_like;
-    private double temp_min;
-    private double temp_max;
-    private double pressure;
-    private double humidity;
-}
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true)
-class Weather {
-    private int id;
-    private String main;
-    private String description;
-}
