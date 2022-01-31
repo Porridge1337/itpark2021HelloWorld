@@ -12,11 +12,11 @@ public class Runner {
 
     public static void main(String[] args) throws URISyntaxException, IOException {
         WeatherInfoProvider provider = new WeatherInfoProvider();
-        String[] cities = printCities();
+        List<String> cities = getUserCities();
         provider.getWeatherForecast(cities);
     }
 
-    public static String[] printCities() {
+    public static List<String> getUserCities() {
         Scanner sc = new Scanner(System.in);
         List<String> cities = new ArrayList<>();
         do {
@@ -26,6 +26,6 @@ public class Runner {
             System.out.println("Нажмите 'q' для остановки ввода, для продолжения любой символ.");
         } while (!sc.nextLine().equals("q"));
 
-        return cities.toArray(new String[0]);
+        return cities;
     }
 }
