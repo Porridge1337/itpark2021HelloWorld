@@ -22,15 +22,17 @@ public class WeatherInfoProvider {
 
     private List<WeatherInfo> weatherInfos = new ArrayList<>();
 
+    private ObjectMapper mapper;
 
-    public void getWeatherForecast(String[] cities) throws IOException, URISyntaxException {
+
+    public void getWeatherForecast(List<String> cities) throws IOException, URISyntaxException {
         fillWeatherInfos(cities);
         for (WeatherInfo info : weatherInfos) {
             System.out.println(info + "\n");
         }
     }
 
-    private void fillWeatherInfos(String[] cities) {
+    private void fillWeatherInfos(List<String> cities) {
         for (String city : cities) {
             try {
                 WeatherInfo info = getWeather(getURL(city));
@@ -42,14 +44,14 @@ public class WeatherInfoProvider {
     }
 
     private WeatherInfo getWeather(URL weatherURL) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
+        mapper = new ObjectMapper();
         WeatherInfo weatherInfo = mapper.readValue(weatherURL, WeatherInfo.class);
         return weatherInfo;
     }
 
     private URL getURL(String city) throws URISyntaxException, MalformedURLException {
-        String URI = weatherURL + "q=" + city + "&" + keyParameter + getAPIKey() + "&" + unitsParameter;
-        return new URI(URI).toURL();
+        String URL = weatherURL + "q=" + city + "&" + keyParameter + getAPIKey() + "&" + unitsParameter;
+        return new URL(URL);
     }
 
     private String getAPIKey() {
