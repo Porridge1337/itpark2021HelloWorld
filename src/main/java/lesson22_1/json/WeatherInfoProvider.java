@@ -7,7 +7,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -56,7 +55,7 @@ public class WeatherInfoProvider {
 
     private String getAPIKey() {
         Properties prop = new Properties();
-        try (InputStream inputStream = new FileInputStream("./src/main/resources/lesson22/APIKey.properties")) {
+        try (InputStream inputStream = new FileInputStream("./src/main/resources/APIKey.properties")) {
             prop.load(inputStream);
         } catch (IOException exception) {
             exception.printStackTrace();
