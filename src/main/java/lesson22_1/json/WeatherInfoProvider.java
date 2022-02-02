@@ -21,10 +21,10 @@ public class WeatherInfoProvider {
 
     private List<WeatherInfo> weatherInfos = new ArrayList<>();
 
-    private static Properties API_KEY;
+    private final static Properties API_KEY;
     private ObjectMapper mapper;
 
-    {
+    static {
         API_KEY = new Properties();
         try (InputStream inputStream = new FileInputStream("./src/main/resources/APIKey.properties")) {
             API_KEY.load(inputStream);
