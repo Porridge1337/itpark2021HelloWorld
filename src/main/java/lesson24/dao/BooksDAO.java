@@ -28,7 +28,7 @@ public class BooksDAO {
                             values(?,?,?,?,?,?)
                             """);
             for (int i = 0; i < books.size(); i++) {
-                if (!isExist(books.get(i).getId())) {
+                if (!isExist(books.get(i).getIsbn())) {
                     pr.setLong(1, books.get(i).getIsbn());
                     pr.setString(2, books.get(i).getAuthor());
                     pr.setString(3, books.get(i).getTitle());
@@ -86,15 +86,15 @@ public class BooksDAO {
         return books;
     }
 
-    private boolean isExist(int id) throws SQLException {
+    private boolean isExist(long isbn) throws SQLException {
         Connection connection = establishConnection();
         boolean result;
         PreparedStatement pr = connection.prepareStatement(
                 """
                         SELECT id FROM books 
-                        WHERE id = ?
+                        WHERE ISBN = ?
                         """);
-        pr.setInt(1, id);
+        pr.setLong(1, isbn);
         ResultSet rs = pr.executeQuery();
         result = rs.next();
         connection.close();

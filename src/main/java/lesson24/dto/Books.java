@@ -25,4 +25,16 @@ public class Books {
     @CsvBindByName
     private String attributes;
 
+    @Override
+    public String toString() {
+        return
+                "id:" + id + "\n"
+                        + "isbn:" + isbn + "\n"
+                        + "Автор:" + author + "\n"
+                        + "Название книги:" + title + "\n"
+                        + "Ссылка на книгу:" + link + "\n"
+                        + "Страниц:" + pages + "\n"
+                        + "Прочие атрибуты:" + attributes + "\n";
+
+    }
 }

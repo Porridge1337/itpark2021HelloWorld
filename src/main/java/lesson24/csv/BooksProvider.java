@@ -14,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class BooksProvider {
@@ -38,8 +39,11 @@ public class BooksProvider {
         try (Reader reader = Files.newBufferedReader(path)) {
             CSVReader csvReader = new CSVReader(reader);
             List<String[]> allElements = csvReader.readAll();
-            for (int i = 1; i < allElements.size(); i++) {
-                allElements.remove(i);
+            for (Iterator<String[]> iterator = allElements.iterator(); iterator.hasNext(); ) {
+                String[] element = iterator.next();
+                if (!element[0].equals("ISBN")){
+                    iterator.remove();
+                }
             }
             FileWriter sw = new FileWriter(path.toString());
             CSVWriter writer = new CSVWriter(sw);
