@@ -15,6 +15,8 @@ public class Books {
     @CsvBindByName
     private long isbn;
     @CsvBindByName
+    private String author;
+    @CsvBindByName
     private String title;
     @CsvBindByName
     private String link;

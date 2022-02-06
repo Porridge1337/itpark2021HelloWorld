@@ -24,13 +24,13 @@ public class BooksDAO {
         try (Connection connection = establishConnection()) {
             PreparedStatement pr = connection.prepareStatement(
                     """
-                            INSERT INTO books (id, ISBN, title, link,  pages, attributes)
+                            INSERT INTO books (ISBN, author, title, link,  pages, attributes)
                             values(?,?,?,?,?,?)
                             """);
             for (int i = 0; i < books.size(); i++) {
                 if (!isExist(books.get(i).getId())) {
-                    pr.setInt(1, books.get(i).getId());
-                    pr.setLong(2, books.get(i).getIsbn());
+                    pr.setLong(1, books.get(i).getIsbn());
+                    pr.setString(2, books.get(i).getAuthor());
                     pr.setString(3, books.get(i).getTitle());
                     pr.setString(4, books.get(i).getLink());
                     pr.setInt(5, books.get(i).getPages());
@@ -58,22 +58,26 @@ public class BooksDAO {
         }
     }
 
-    public List<Books> findById(int id) {
+    public List<Books> findByAuthor(String author) {
         List<Books> books = new ArrayList<>();
         try (Connection connection = establishConnection()) {
             PreparedStatement pr = connection.prepareStatement(
                     """
                             SELECT *FROM books
-                            WHERE id = ?
+                            WHERE author = ?
                             """
             );
-            pr.setInt(1, id);
+            pr.setString(1, author);
             ResultSet rs = pr.executeQuery();
             while (rs.next()) {
-                Books book = new Books(rs.getInt("id"),
-                        rs.getLong("ISBN"), rs.getString("title"),
-                        rs.getString("link"), rs.getInt("pages"),
-                        rs.getString("attributes"));
+                Books book = new Books();
+                book.setId(rs.getInt("id"));
+                book.setIsbn(rs.getLong("ISBN"));
+                book.setAuthor(rs.getString("author"));
+                book.setTitle(rs.getString("title"));
+                book.setLink(rs.getString("link"));
+                book.setPages(rs.getInt("pages"));
+                book.setAttributes(rs.getString("attributes"));
                 books.add(book);
             }
         } catch (SQLException e) {

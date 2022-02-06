@@ -5,6 +5,7 @@ import lesson24.dao.BooksDAO;
 import lesson24.dto.Books;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Runner {
 
@@ -13,10 +14,25 @@ public class Runner {
         List<Books> books = new BooksProvider().getBooks();
 
         booksDAO.fillBooks(books);
-        booksDAO.deleteBook(2);
-        List<Books> booksFromDAO = booksDAO.findById(0);
-        System.out.println(booksFromDAO);
+        do {
+            List<Books> booksFromDAO = booksDAO.findByAuthor(getBooks());
+            System.out.println(booksFromDAO);
+        } while (shouldContinue());
+
     }
 
+    private static String getBooks() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введите автора: ");
+        String city = sc.nextLine();
+        return city;
+    }
 
+    private static boolean shouldContinue() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Нажмите 'q' для остановки ввода, для продолжения любой символ.");
+        if (!sc.nextLine().equals("q")) {
+            return true;
+        } else return false;
+    }
 }
