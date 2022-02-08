@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 public class AuthorsDAO {
-
     public Authors findAuthorById(long id) {
         try (Session session = HibernateUtil.getSessionFactory().getCurrentSession()) {
             Transaction transaction = session.beginTransaction();

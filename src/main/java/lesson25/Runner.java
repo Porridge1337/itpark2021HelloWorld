@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Runner {
-
     public static void main(String[] args) throws IOException {
         AuthorsDAO authorsDAO = new AuthorsDAO();
         BooksDAO booksDAO = new BooksDAO();
@@ -46,5 +45,4 @@ public class Runner {
         System.out.println("Нажмите 'q' для остановки ввода, для продолжения любой символ.");
         return !sc.nextLine().equals("q");
     }
-
 }

@@ -10,8 +10,6 @@ import org.hibernate.query.Query;
 import java.util.List;
 
 public class BooksDAO {
-
-
     public void addBooks(List<Books> booksList) {
         try (Session session = HibernateUtil.getSessionFactory().getCurrentSession()) {
             Transaction transaction = session.beginTransaction();
@@ -43,5 +41,4 @@ public class BooksDAO {
             return searchedBooks;
         }
     }
-
 }
