@@ -1,3 +1,6 @@
-"ISBN","attributes","link","pages","title"
-1234567890123,Мягкая обложка,https://www.bookvoed.ru/book?id=6157281,62,На дне
-1234567890126,Мягкая обложка,https://www.bookvoed.ru/book?id=6157281,69,На дне2
+"ISBN","attributes","link","pages","title","authors_id"
+1234567890123,Мягкая обложка,https://www.bookvoed.ru/book?id=7086312,384,На дне,3
+1234567890126,Твердая обложка,https://www.bookvoed.ru/book?id=5005612,319,Детство,3
+9999999999999,мягкая обложка,https://www.bookvoed.ru/book?id=12953330,416,Мать,3
+8888888888888,твердая обложка,https://www.bookvoed.ru/book?id=3300384,288,Вий,1
+7897897897897,мягкая обложка,https://www.bookvoed.ru/book?id=12329700,224,Руслан и Людмила. Сказки. Песни западных славян,2

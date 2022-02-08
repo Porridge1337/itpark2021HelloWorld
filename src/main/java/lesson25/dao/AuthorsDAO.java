@@ -1,14 +1,12 @@
 package lesson25.dao;
 
-import lesson25.dto.Books;
-import lesson25.hibernate.HibernateUtil;
 import lesson25.dto.Authors;
-
+import lesson25.hibernate.HibernateUtil;
 import org.hibernate.Session;
-
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -31,9 +29,8 @@ public class AuthorsDAO {
     public void addAuthor(Authors author) {
         try (Session session = HibernateUtil.getSessionFactory().getCurrentSession()) {
             Transaction transaction = session.beginTransaction();
-            if (!authorIsExist(author.getAuthor())) {
-                session.save(author);
-            }
+            deleteAuthors();
+            session.save(author);
             transaction.commit();
         }
     }
@@ -41,26 +38,26 @@ public class AuthorsDAO {
     public void addAuthors(List<Authors> authorsList) {
         try (Session session = HibernateUtil.getSessionFactory().getCurrentSession()) {
             Transaction transaction = session.beginTransaction();
+            deleteAuthors();
             for (Authors author : authorsList) {
-                if (!authorIsExist(author.getAuthor())) {
-                    session.save(author);
-                }
+                session.save(author);
             }
             transaction.commit();
         }
     }
 
-    public boolean authorIsExist(String author) {
+    public void deleteAuthors() {
         try (Session session = HibernateUtil.getSessionFactory().getCurrentSession()) {
-            boolean result = true;
             Transaction transaction = session.beginTransaction();
-            Query<Authors> searchQuery = session.createQuery("from Authors where author =: name", Authors.class);
-            searchQuery.setParameter("name", author);
-            if (searchQuery.list().isEmpty()) {
-                result = false;
+            Query<Authors> allQuery = session.createQuery("from Authors", Authors.class);
+            List<Authors> authors = allQuery.list();
+            if (!authors.isEmpty()) {
+                for (Iterator<Authors> iterator = authors.iterator(); iterator.hasNext(); ) {
+                    Authors authors1 = iterator.next();
+                    session.delete(authors1);
+                }
             }
             transaction.commit();
-            return result;
         }
     }
 }

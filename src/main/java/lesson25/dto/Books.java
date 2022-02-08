@@ -1,13 +1,25 @@
 package lesson25.dto;
 
 import com.opencsv.bean.CsvBindByName;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.Transient;
 
 @Getter
 @Setter
-@ToString(exclude = "authors")
+@ToString()
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -31,8 +43,10 @@ public class Books {
     @Column(name = "attributes")
     @CsvBindByName
     private String attributes;
+    @Transient
+    @CsvBindByName()
+    private int authors_id;
     @ManyToOne
     @JoinColumn(name = "authors_id")
-    @CsvBindByName(column = "authors_id")
     private Authors authors;
 }
