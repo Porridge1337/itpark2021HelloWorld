@@ -20,6 +20,7 @@
         <junit.version>4.13.2</junit.version>
         <opencsv.version>5.5.2</opencsv.version>
         <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
+        <hibernate-core.version>5.6.5.Final</hibernate-core.version>
     </properties>
 
     <dependencies>
@@ -67,7 +68,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql-connector-java.version}</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate-core.version}</version>
+        </dependency>
 
     </dependencies>
 
