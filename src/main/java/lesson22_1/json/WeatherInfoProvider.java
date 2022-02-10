@@ -26,7 +26,7 @@ public class WeatherInfoProvider {
 
     static {
         API_KEY = new Properties();
-        try (InputStream inputStream = new FileInputStream("./src/main/resources/APIKey.properties")) {
+        try (InputStream inputStream = new FileInputStream("./src/main/resources/project.properties")) {
             API_KEY.load(inputStream);
         } catch (IOException exception) {
             exception.printStackTrace();
