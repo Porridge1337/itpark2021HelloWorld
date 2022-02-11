@@ -14,7 +14,7 @@ public class Runner {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         CbrInfoProvider service = context.getBean(CbrInfoProvider.class);
         CacheProvider cacheProvider = context.getBean(CacheProvider.class);
-        CurrencyCache currencyCache = cacheProvider.getCurrencyСache(service.getCbrDailyInfo());
+        CurrencyCache currencyCache = cacheProvider.getCurrencyCache(service.getCbrDailyInfo());
         System.out.println(currencyCache.getCurrencyCache().get("USD"));
         System.out.println(currencyCache.getCurrencyCache().get("GBP"));
         System.out.println(currencyCache.getCurrencyCache().get("EUR"));

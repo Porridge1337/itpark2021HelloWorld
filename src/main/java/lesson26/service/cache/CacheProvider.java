@@ -5,6 +5,6 @@ import lesson26.dto.CurrencyCache;
 
 public interface CacheProvider {
 
-    CurrencyCache getCurrencyСache (CbrDailyInfo cbrDailyInfo) throws IllegalAccessException;
+    CurrencyCache getCurrencyCache (CbrDailyInfo cbrDailyInfo) throws IllegalAccessException;
 
 }

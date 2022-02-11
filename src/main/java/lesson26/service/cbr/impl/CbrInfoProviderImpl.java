@@ -13,7 +13,7 @@ import java.net.URL;
 public class CbrInfoProviderImpl implements CbrInfoProvider {
 
     private static final String CBR_RUL = "https://www.cbr-xml-daily.ru/daily_json.js";
-    private ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper mapper = new ObjectMapper();
 
     @Override
     public CbrDailyInfo getCbrDailyInfo() throws IOException {
