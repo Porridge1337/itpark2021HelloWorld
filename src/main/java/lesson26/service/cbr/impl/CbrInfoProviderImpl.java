@@ -6,11 +6,8 @@ import lesson26.service.cbr.CbrInfoProvider;
 import lombok.NoArgsConstructor;
 
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 
 @NoArgsConstructor
 public class CbrInfoProviderImpl implements CbrInfoProvider {

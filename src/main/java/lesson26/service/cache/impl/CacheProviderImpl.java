@@ -13,7 +13,7 @@ import java.util.Map;
 public class CacheProviderImpl implements CacheProvider {
 
     @Override
-    public CurrencyCache getCurrencyCash(CbrDailyInfo cbrDailyInfo) throws IllegalAccessException {
+    public CurrencyCache getCurrencyСache(CbrDailyInfo cbrDailyInfo) throws IllegalAccessException {
         Map<String, Valuta> currencyCache = new HashMap<>();
         Class<Currency> currencyClass = Currency.class;
         Field[] declaredFields = currencyClass.getDeclaredFields();

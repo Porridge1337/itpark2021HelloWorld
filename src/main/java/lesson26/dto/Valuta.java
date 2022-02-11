@@ -30,4 +30,10 @@ public class Valuta {
     @JsonProperty("Previous")
     private BigDecimal previous;
 
+    @Override
+    public String toString() {
+        return "Валюта с тикером " + CharCode + '\n' +
+                "номиналом = " + nominal + " " + name + " " + '\n' +
+                "имеет ценность = " + value + '\n';
+    }
 }
