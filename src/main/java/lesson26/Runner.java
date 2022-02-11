@@ -15,10 +15,10 @@ public class Runner {
         CbrInfoProvider service = context.getBean(CbrInfoProvider.class);
         CacheProvider cacheProvider = context.getBean(CacheProvider.class);
         CurrencyCache currencyCache = cacheProvider.getCurrencyCache(service.getCbrDailyInfo());
-        System.out.println(currencyCache.getCurrencyCache().get("USD"));
-        System.out.println(currencyCache.getCurrencyCache().get("GBP"));
-        System.out.println(currencyCache.getCurrencyCache().get("EUR"));
-        System.out.println(currencyCache.getCurrencyCache().get("UAH"));
-        System.out.println(currencyCache.getCurrencyCache().get("BYN"));
+        System.out.println(currencyCache.printСurrencyInfo("USD"));
+        System.out.println(currencyCache.printСurrencyInfo("GbP"));
+        System.out.println(currencyCache.printСurrencyInfo("eur"));
+        System.out.println(currencyCache.printСurrencyInfo("UAH"));
+        System.out.println(currencyCache.printСurrencyInfo("BYN"));
     }
 }
