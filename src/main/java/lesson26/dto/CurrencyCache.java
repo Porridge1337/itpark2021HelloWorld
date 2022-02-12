@@ -11,7 +11,7 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CurrencyCache {
-    Map<String, Valuta> currencyCache;
+    private Map<String, Valuta> currencyCache;
 
     public Valuta printСurrencyInfo(String currency) {
         return this.currencyCache.get(currency.toUpperCase(Locale.ROOT));
