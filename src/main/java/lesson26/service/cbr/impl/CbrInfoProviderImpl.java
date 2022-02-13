@@ -17,7 +17,7 @@ public class CbrInfoProviderImpl implements CbrInfoProvider {
     private static final String CBR_RUL = "https://www.cbr-xml-daily.ru/daily_json.js";
     private ObjectMapper mapper;
 
-
+    @Autowired
     public CbrInfoProviderImpl(ObjectMapper mapper) {
         this.mapper = mapper;
     }
