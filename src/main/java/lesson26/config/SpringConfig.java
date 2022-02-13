@@ -1,5 +1,6 @@
 package lesson26.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lesson26.service.cache.CacheProvider;
 import lesson26.service.cache.impl.CacheProviderImpl;
 import lesson26.service.cbr.CbrInfoProvider;
@@ -14,12 +15,17 @@ public class SpringConfig {
 
     @Bean
     public CbrInfoProvider cbrInfoProvider() {
-        return new CbrInfoProviderImpl();
+        return new CbrInfoProviderImpl(objectMapper());
     }
 
     @Bean
     public CacheProvider cacheProvider() {
         return new CacheProviderImpl();
+    }
+
+    @Bean
+    public ObjectMapper objectMapper(){
+        return new ObjectMapper();
     }
 
 
