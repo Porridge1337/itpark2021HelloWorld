@@ -3,7 +3,6 @@ package lesson26.service.cbr.impl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lesson26.dto.CbrDailyInfo;
 import lesson26.service.cbr.CbrInfoProvider;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
